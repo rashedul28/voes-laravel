@@ -79,7 +79,7 @@
                   <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="name" class="form-control" id="inputName" value="{{$data->role}}">
+                      <input type="name" class="form-control" id="inputName" value="{{$data->name}}">
                     </div>
                   </div>
                   <div class="form-group row">

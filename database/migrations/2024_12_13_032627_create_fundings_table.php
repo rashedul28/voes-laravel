@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('fundings', function (Blueprint $table) {
             $table->id();
             $table->string('event_Name');
-            $table->string('amount');
+            $table->integer('amount');
             $table->timestamps();
         });
     }

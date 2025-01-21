@@ -29,8 +29,8 @@ class MemberController extends Controller
 
         $member->phone = $request->phone;
         $member->password = $request->password;
-        $member->name = "RASHEDUL";
-        $member->image = "IMAGE";
+        $member->name = $request->name;
+        $member->image = "You look beautiful";
         $member->department = $request->department;
         $member->role = $request->role;
         $member->joined = date('Y-m-d');

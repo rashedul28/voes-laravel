@@ -98,7 +98,6 @@
             <thead>
               <tr>
                 <th>Id</th>
-                <th>Phone</th>
                 <th>Amount</th>
                 <th>Sector</th>
               </tr>
@@ -108,7 +107,6 @@
 
               <tr>
                 <td>{{$e->id}}</td>
-                <td>phone</td>
                 <td>{{$e->amount}}</td>
                 <td>{{$e->sector}}</td>
               </tr>
@@ -145,11 +143,11 @@
             <table class="table">
               <tr>
                 <th>Funding:</th>
-                <td>$250.30</td>
+                <td>{{$totalFunding}}</td>
               </tr>
               <tr>
                 <th>Expense:</th>
-                <td>$10.34</td>
+                <td>{{$totalExpense}}</td>
               </tr>
 
             </table>

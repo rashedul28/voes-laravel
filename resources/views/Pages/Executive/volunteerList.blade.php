@@ -28,10 +28,10 @@
         <div class="card">
             <div class="card-header">
 
-                <button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> <a href="/members/executive">Executive</a></button>
+                <a href="/members/executive"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> Executive</button></a>
 
 
-                <button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> <a href="/members/volunteer">Volunteer</a></button>
+                <a href="/members/volunteer"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> Volunteer</button></a>
 
 
 
@@ -64,8 +64,8 @@
                         @foreach($volunteers as $volunteer)
                         <tr>
                             <td>{{$volunteer->id}}</td>
-                            <td>{{$volunteer->name}}</td>
                             <td>{{$volunteer->phone}}</td>
+                            <td>{{$volunteer->name}}</td>
                             <td>{{$volunteer->role}}</td>
                             <td><img src="{{ url('favicon_io/android-chrome-512x512.png') }}" width="100" height="100"
                                     alt="VOES LOGO" /></td>

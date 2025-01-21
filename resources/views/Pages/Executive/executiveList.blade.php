@@ -28,10 +28,10 @@
     <div class="card">
       <div class="card-header">
 
-        <button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> <a href="/members/executive">Executive</a></button>
+        <a href="/members/executive"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> Executive</button></a>
 
 
-        <button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i><a href="/members/volunteer">Volunteer</a></button>
+        <a href="/members/volunteer"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i>Volunteer</button></a>
 
 
 

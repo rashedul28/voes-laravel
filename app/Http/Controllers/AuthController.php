@@ -16,12 +16,12 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
         // if ($valid) {
-        $check = Members::where('phone', $request->phone)->where('password', $request->password)->first();
+        $check = Members::where('phone', $request->phone)->where('password', $request->password)->where('role', 'Executive')->first();
 
         if ($check) {
             $request->session()->put('sExecutiveId', $check->id);
             $request->session()->put('authorized', true);
-            return view('Pages.Executive.dashboardCount');
+            return redirect("/dashboard");
         } else {
             return back();
         }
@@ -36,9 +36,11 @@ class AuthController extends Controller
         ]);
 
         if ($valid) {
-            $check = Members::where('phone', $request->phone)->where('password', $request->password)->first();
+            $check = Members::where('phone', $request->phone)->where('password', $request->password)->where('role', 'Volunteer')->first();
 
             if ($check) {
+                $request->session()->put('sVolunteerId', $check->id);
+                $request->session()->put('authorized', true);
                 return redirect('/events/showEvent/ongoing');
             } else {
                 return back();

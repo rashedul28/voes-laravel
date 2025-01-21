@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Exdonation;
 use App\Models\Indonation;
+use App\Models\Members;
 use Illuminate\Http\Request;
 
 class DonationController extends Controller
 {
     public function donationInternal()
     {
-        return view('Pages.Executive.donationInternal');
+        $members_id = Members::all();
+        return view('Pages.Executive.donationInternal')
+            ->with('members_id', $members_id);
     }
 
     public function donationInternalSubmit(Request $request)

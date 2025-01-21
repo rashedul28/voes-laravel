@@ -162,6 +162,10 @@ class EventController extends Controller
     {
         $store = $request->event_name;
 
+        $totalFunding = Funding::sum("amount");
+        $totalExpense = Expense::sum('amount');
+
+
         // dd($store);
 
         $event = Event::where('event_name', $store)->first();
@@ -176,6 +180,8 @@ class EventController extends Controller
             ->with('funding', $funding)
             ->with('expense', $expense)
             ->with('event', $event)
-            ->with('date', $now);
+            ->with('date', $now)
+            ->with('totalFunding', $totalFunding)
+            ->with('totalExpense', $totalExpense);
     }
 }

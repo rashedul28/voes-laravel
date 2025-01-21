@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('indonations', function (Blueprint $table) {
+        Schema::create('inquries', function (Blueprint $table) {
             $table->id();
             $table->foreignId('members_id')->constrained()->onDelete('cascade');
-            $table->integer('amount');
+            $table->string('subject');
+            $table->longText('body');
+            $table->boolean('read');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('indonations');
+        Schema::dropIfExists('inquries');
     }
 };
