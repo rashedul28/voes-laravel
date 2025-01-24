@@ -33,7 +33,7 @@ class MemberController extends Controller
 
         $member->phone = $request->phone;
         $member->password = $password;
-        $member->name = $request->name;
+        $member->name = "N/A";
         $member->image = "You look beautiful";
         $member->department = $request->department;
         $member->role = $request->role;
@@ -102,6 +102,8 @@ class MemberController extends Controller
 
         // echo $searchExecutive;
     }
+
+
     public function volunteerList()
     {
         $searchVolunteer = Members::where('role', 'Volunteer')->get();

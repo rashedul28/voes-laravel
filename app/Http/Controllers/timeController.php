@@ -45,17 +45,22 @@ class timeController extends Controller
     public function Volunteers(Request $request)
     {
         $data = Members::where('role', 'Volunteer')->get();
+
+
         return view('Pages.Executive.availableVolunteer')
+            ->with('msg', 'All Volunteers')
             ->with('data', $data);
     }
 
     public function VolunteersFree(Request $request)
     {
-        $find = Slot::where($request->slot, '1')->pluck('members_id');
+        $find = Slot::where($request->slot, 'Free')->pluck('members_id');
 
         $data = Members::whereIn('id', $find)->get();
 
         return view("Pages.Executive.availableVolunteer")
+            ->with('msg', 'Free Volunteers')
+
             ->with('data', $data);
     }
 }

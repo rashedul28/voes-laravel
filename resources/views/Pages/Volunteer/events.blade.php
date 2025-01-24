@@ -30,9 +30,9 @@
 
         <!-- <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-list"></i>ALL</button> -->
 
-        <a href="/events/showEvent/ongoing"><button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-play"></i>ONGOING</button></a>
+        <a href="/events/showEvent/ongoing"><button type="button" class="btn btn-primary btn"><i class="fa fa-play"></i>ONGOING</button></a>
 
-        <a href="/events/showEvent/archieve"><button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-history"></i>ARCHIEVE</button></a>
+        <a href="/events/showEvent/archieve"><button type="button" class="btn btn-primary btn"><i class="fa fa-history"></i>ARCHIEVE</button></a>
 
 
 

@@ -28,10 +28,10 @@
     <div class="card">
       <div class="card-header">
 
-        <a href="/members/executive"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i> Executive</button></a>
+        <a href="/members/executive"><button type="button" class="btn btn-primary btn"><i class="fas fa-user"></i> Executive</button></a>
 
 
-        <a href="/members/volunteer"><button type="button" class="btn btn-outline-primary btn-block"><i class="fas fa-user"></i>Volunteer</button></a>
+        <a href="/members/volunteer"><button type="button" class="btn btn-primary btn "><i class="fas fa-user"></i>Volunteer</button></a>
 
 
 
@@ -52,29 +52,62 @@
         <table class="table table-hover text-nowrap" id="example">
           <thead>
             <tr>
-              <th>#@</th>
-              <th>Name</th>
+              <th>Index</th>
+              <th>Id</th>
               <th>Phone</th>
+              <th>Password</th>
+              <th>Name</th>
+              <th>Display</th>
+              <th>Department</th>
               <th>Role</th>
-              <th>Pictures</th>
-              <th>Joined</th>
+              <!-- <th>Action</th> -->
             </tr>
           </thead>
           <tbody>
             @foreach($executives as $executive)
             <tr>
+              <td>{{$loop->index}}</td>
               <td>{{$executive->id}}</td>
-              <td>{{$executive->name}}</td>
               <td>{{$executive->phone}}</td>
+              <td>
+
+
+                <!-- <span class="password-field">xxx</span>
+                {{-- <input
+                                        type="password"
+                                        value="{{ $executive->password }}"
+                class="password-field border border-gray-300 rounded px-1 py-1"
+                readonly /> --}}
+                <button
+                  type="button"
+                  class=class=" btn btn-primary btn"
+                  onclick="togglePassword(this, '{{ $executive->password }}')">
+                  Show
+                </button> -->
+              </td>
+              <td>{{$executive->name}}</td>
+              <td>{{$executive->image}}</td>
+              <td>{{$executive->department}}</td>
               <td>{{$executive->role}}</td>
-              <td><img src="{{ url('favicon_io/android-chrome-512x512.png') }}" width="100" height="100"
-                  alt="VOES LOGO" /></td>
-              <td>{{$executive->joined}}</td>
+              <!-- <td><a href="">Reset Password</a></td> -->
             </tr>
             @endforeach
 
 
           </tbody>
+          <tfoot>
+            <tr>
+              <th>Index</th>
+              <th>Id</th>
+              <th>Phone</th>
+              <th>Password</th>
+              <th>Name</th>
+              <th>Display</th>
+              <th>Department</th>
+              <th>Role</th>
+              <!-- <th>Action</th> -->
+            </tr>
+          </tfoot>
         </table>
       </div>
       <!-- /.card-body -->
@@ -83,6 +116,22 @@
   </div>
 </div>
 
+<!-- toggle password -->
+
+<script>
+  function togglePassword(button, password) {
+    // Find the input field adjacent to the button
+    const passwordField = button.previousElementSibling;
+
+    if (passwordField.innerText == "xxx") {
+      passwordField.innerText = password;
+      button.innerText = "Hide";
+    } else {
+      passwordField.innerText = "xxx";
+      button.innerText = "Show";
+    }
+  }
+</script>
 
 <!-- datatables table design -->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>

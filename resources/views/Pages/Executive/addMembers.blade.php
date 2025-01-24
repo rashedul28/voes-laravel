@@ -59,7 +59,7 @@
                 </div>
             </div> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>name</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -67,7 +67,7 @@
                     </div>
                     <input type="text" class="form-control" name="name" placeholder="name" required>
                 </div>
-            </div>
+            </div> -->
 
             <!-- <div class="form-group">
                 <label>Image</label>

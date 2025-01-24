@@ -6,9 +6,9 @@
       <div class="card-header">
 
         <!-- <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-th"></i>ALL</button> -->
-        <a href="/events/eventFinancialLog/funding"><button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-arrow-up"></i>Funding</button></a>
+        <a href="/events/eventFinancialLog/funding"><button type="button" class="btn btn-primary btn"><i class="fa fa-arrow-up"></i>Funding</button></a>
 
-        <a href="/events/eventFinancialLog/expense"><button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-arrow-down"></i>Expense</button></a>
+        <a href="/events/eventFinancialLog/expense"><button type="button" class="btn btn-primary btn"><i class="fa fa-arrow-down"></i>Expense</button></a>
 
 
 

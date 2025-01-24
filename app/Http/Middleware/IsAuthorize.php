@@ -15,6 +15,9 @@ class IsAuthorize
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        if (session('authorized') == true)
+            return $next($request); {
+        }
+        return redirect('/logout');
     }
 }

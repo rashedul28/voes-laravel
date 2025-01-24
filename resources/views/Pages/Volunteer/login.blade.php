@@ -22,15 +22,26 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <img src="{{ url('favicon_io/android-chrome-512x512.png') }}" width="100" height="100"
-                alt="VOES LOGO" />
+            <!-- <img src="{{ url('favicon_io/android-chrome-512x512.png') }}" width="100" height="100" -->
+            <!-- alt="VOES LOGO" /> -->
 
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
-                <p class="login-box-msg"><i>Volunteer</i></p>
+                <p class="login-box-msg">
+                <h3>Volunteer</h3>
+                </p>
 
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form action="/login/volunteer" method="post">
                     @csrf
 
@@ -62,7 +73,7 @@
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Log In</button>
                         </div>
                         <!-- /.col -->
                     </div>
@@ -71,10 +82,10 @@
 
 
                 <p class="mb-1">
-                    <a href="forgot-password.html">I forgot my password</a>
+                    <!-- <a href="forgot-password.html">I forgot my password</a> -->
                 </p>
                 <p class="mb-0">
-                    <a href="/login/executive" class="text-center">Log in as <i>Executive</i></a>
+                    <a href="/login/executive" class="text-center">Log in as <u>Executive</u></a>
                 </p>
             </div>
             <!-- /.login-card-body -->

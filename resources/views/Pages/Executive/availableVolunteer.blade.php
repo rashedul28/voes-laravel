@@ -62,6 +62,7 @@
   <div class="card card-solid">
     <div class="card-body pb-0">
 
+      <h3>{{$msg}}</h3>
       @foreach($data as $d)
 
       <div class="row">
@@ -85,8 +86,8 @@
             </div>
             <div class="card-footer">
               <div class="text-right">
-                <a href="/application/feedback" class="btn btn-sm bg-teal">
-                  <i class="fas fa-comments"></i>
+                <!-- <a href="/application/feedback" class="btn btn-sm bg-teal"> -->
+                <!-- <i class="fas fa-comments"></i> -->
                 </a>
                 <a href="/profile" class="btn btn-sm btn-primary">
                   <i class="fas fa-user"></i> View Profile
