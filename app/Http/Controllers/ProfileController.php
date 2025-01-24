@@ -24,25 +24,22 @@ class ProfileController extends Controller
 
     public function profileUpdate(Request $request)
     {
-        // $valid = $request->validate([
-        //     'name' => 'required',
-        //     'phone' => 'required',
-        //     'password' => 'required',
-        // ]);
+        $request->validate([
+            'name' => 'string',
+            'phone' => 'required | string',
+            'password' => 'required',
+        ]);
 
-        // if ($valid) {
 
-        $phonePassword = Executive::where('id', session('sExecutiveId')->id)->first();
-        $executiveInfo = Infoexecutives::where('executives_id', session('sExecutiveId')->id)->first();
-        // $phonePassword->phone = $request->phone;
-        // $phonePassword->password = $request->password;
-        // $executiveInfo->name = $request->name;
-        // $executiveInfo->image = $request->image;
 
-        // $phonePassword->save();
-        // $executiveInfo->save();
-        dd(session('sExecutiveId'));
-        // return view('Pages.Executive.profile');
-        // }
+        $id = Members::where('id', session("sExecutiveId")->id)->first();
+
+        $id->name = $request->name;
+        $id->phone = $request->phone;
+        $id->password = $request->password;
+
+        $id->save();
+        return view('Pages.Executive.profile')
+            ->with('data', $id);
     }
 }

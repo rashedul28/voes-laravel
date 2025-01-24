@@ -70,7 +70,15 @@
           <div class="card-body">
             <div class="tab-content">
 
-
+              @if ($errors->any())
+              <div class="alert alert-danger">
+                <ul>
+                  @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+                  @endforeach
+                </ul>
+              </div>
+              @endif
               <div class="active-tab-pane" id="settings">
                 <form class="form-horizontal" method="post" action="/profile/update">
                   @csrf
@@ -79,20 +87,20 @@
                   <div class="form-group row">
                     <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-10">
-                      <input type="name" class="form-control" id="inputName" value="{{$data->name}}">
+                      <input type="name" class="form-control" id="inputName" name="name" value="{{$data->name}}">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputPhoneNo" class="col-sm-2 col-form-label">Phone</label>
                     <div class="col-sm-10">
-                      <input type="phone" class="form-control" id="inputPhoneNo" value="{{$data->phone}}">
+                      <input type="phone" class="form-control" id="inputPhoneNo" name="phone" value="{{$data->phone}}">
                     </div>
                   </div>
 
                   <div class="form-group row">
                     <label for="password" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="password" value="{{$data->password}}">
+                      <input type="text" class="form-control" id="password" name="password" value="{{$data->password}}">
                     </div>
                   </div>
 
