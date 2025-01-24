@@ -34,20 +34,17 @@ Route::get('/members/volunteer',          [MemberController::class, 'volunteerLi
 Route::post('/members/add',               [MemberController::class, 'addMember']);
 Route::get('/members/add',                [PageController::class, 'addMember']);
 
-Route::get('/events/allEvents',           [EventController::class, 'allEvents']);
+// Route::get('/events/allEvents',           [EventController::class, 'allEvents']);
 Route::get('/events/create',              [PageController::class, 'createEvent']);
 Route::post('/events/create/submit',      [EventController::class, 'createEventSubmit']);
-Route::get('/events/manage',              [PageController::class, 'manageEvents']);
-Route::get('/events/ongoing',             [PageController::class, 'ongoingEvents']);
+// Route::get('/events/manage',              [PageController::class, 'manageEvents']);
 
-Route::get('/events/archieve',            [PageController::class, 'archieveEvents']);
+Route::get('/events/ongoing',             [EventController::class, 'ongoingEvents_E']);
+Route::get('/events/archieve',            [EventController::class, 'archieveEvents_E']);
+
+
+
 // ESPENSE _______------EXPENSE 
-
-
-
-
-
-
 Route::get('/events/expenseLog',          [EventController::class, 'expenseLog']);
 Route::post('/events/expenseLog/submit',  [EventController::class, 'expenseLogSubmit']);
 Route::get('/events/fundingLog',          [EventController::class, 'fundingLog']);

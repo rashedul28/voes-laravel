@@ -823,7 +823,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/events/allEvents" class="nav-link">
+                <a href="/events/ongoing" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>All Events</p>
                 </a>

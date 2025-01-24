@@ -30,9 +30,9 @@
 
         <!-- <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-list"></i>ALL</button> -->
 
-        <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-play"></i>ONGOING</button>
+        <a href="/events/ongoing"><button type="button" class="btn btn-primary btn"><i class="fa fa-play"></i>ONGOING</button></a>
 
-        <button type="button" class="btn btn-outline-primary btn-block"><i class="fa fa-history"></i>ARCHIEVE</button>
+        <a href="/events/archieve"><button type="button" class="btn btn-primary btn"><i class="fa fa-history"></i>ARCHIEVE</button></a>
 
 
 
@@ -53,7 +53,8 @@
         <table class="table table-hover text-nowrap">
           <thead>
             <tr>
-              <th>#Id</th>
+              <th>Index</th>
+              <th>Id</th>
               <th>Title</th>
               <th>Start</th>
               <th>End</th>
@@ -63,6 +64,7 @@
           <tbody>
             @foreach($events as $event )
             <tr>
+              <td>{{$loop->index}}</td>
               <td>{{$event->id}}</td>
               <td>{{$event->event_name}}</td>
               <td>{{$event->start}}</td>

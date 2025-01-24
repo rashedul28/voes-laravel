@@ -50,14 +50,14 @@ class PageController extends Controller
     {
         return view('Pages.Executive.manageEvents');
     }
-    public function ongoingEvents()
-    {
-        return view('Pages.Executive.ongoingEvents');
-    }
-    public function archieveEvents()
-    {
-        return view('Pages.Executive.archieveEvents');
-    }
+    // public function ongoingEvents()
+    // {
+    //     return view('Pages.Executive.ongoingEvents');
+    // }
+    // public function archieveEvents()
+    // {
+    //     return view('Pages.Executive.archieveEvents');
+    // }
     public function expenseLog()
     {
         return view('Pages.Executive.expenseLog');

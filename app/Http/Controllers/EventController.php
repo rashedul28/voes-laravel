@@ -60,6 +60,28 @@ class EventController extends Controller
             ->with('ongoing', $archieve);
     }
 
+    // executive events shows
+
+    public function ongoingEvents_E(Request $request)
+
+    {
+        $ongoing = Event::where('end', '>', date('Y-m-d'))->get();
+
+        return view('Pages.Executive.allEvents')
+            ->with('events', $ongoing);
+    }
+
+    public function archieveEvents_E(Request $request)
+
+    {
+        $archieve = Event::where('end', '<', date('Y-m-d'))->get();
+
+        return view('Pages.Executive.allEvents')
+            ->with('events', $archieve);
+    }
+    // executive events show end
+
+
     public function fundingLog(Request $request)
     {
 

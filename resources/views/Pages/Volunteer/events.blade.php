@@ -53,22 +53,22 @@
         <table class="table table-hover text-nowrap">
           <thead>
             <tr>
-              <th>#Serial</th>
+              <th>Index</th>
+              <th>Id</th>
               <th>Events Title</th>
               <th>Start Date</th>
               <th>End Date</th>
-              <th>Day Count</th>
               <th>Description</th>
             </tr>
           </thead>
           <tbody>
             @foreach($ongoing as $on)
             <tr>
+              <td>{{$loop->index}}</td>
               <td>{{$on->id}}</td>
               <td>{{$on->event_name}}</td>
               <td>{{$on->start}}</td>
               <td>{{$on->end}}</td>
-              <td>20</td>
               <td>{{$on->description}}</td>
             </tr>
             @endforeach
