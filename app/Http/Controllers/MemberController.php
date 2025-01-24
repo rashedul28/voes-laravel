@@ -6,6 +6,7 @@ use App\Models\Executive;
 use App\Models\Infoexecutives;
 use App\Models\Infovolunteers;
 use App\Models\Members;
+use App\Models\Slot;
 use App\Models\Volunteer;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,10 +17,13 @@ class MemberController extends Controller
     {
         $request->validate([
             'phone' => "required | min:11 | numeric",
-            'password' => 'required | min:8 | max: 16',
             'role' => 'required',
         ]);
 
+
+        $length = $request->input('length', 8); // Default length is 8
+        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+';
+        $password = substr(str_shuffle($characters), 0, $length);
 
 
 
@@ -28,7 +32,7 @@ class MemberController extends Controller
         $volunteer = new Volunteer();
 
         $member->phone = $request->phone;
-        $member->password = $request->password;
+        $member->password = $password;
         $member->name = $request->name;
         $member->image = "You look beautiful";
         $member->department = $request->department;
@@ -36,6 +40,21 @@ class MemberController extends Controller
         $member->joined = date('Y-m-d');
 
         $member->save();
+
+        if ($request->role == "Volunteer") {
+            $data = new Slot();
+            $data->members_id = $member->id;
+
+
+            $data->slot1 = "empty";
+            $data->slot2 = "empty";
+            $data->slot3 = "empty";
+            $data->slot4 = "empty";
+            $data->slot5 = "empty";
+            $data->slot6 = "empty";
+
+            $data->save();
+        }
 
         return view('Pages.Executive.addMembers');
 

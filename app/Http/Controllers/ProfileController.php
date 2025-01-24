@@ -12,7 +12,7 @@ class ProfileController extends Controller
     public function profileView(Request $request)
     {
 
-        $profile = Members::where('id', session("sExecutiveId"))->first();
+        $profile = Members::where('id', session("sExecutiveId")->id)->first();
 
         // dd($id);
         // dd($profile);
@@ -32,8 +32,8 @@ class ProfileController extends Controller
 
         // if ($valid) {
 
-        $phonePassword = Executive::where('id', session('sExecutiveId'))->first();
-        $executiveInfo = Infoexecutives::where('executives_id', session('sExecutiveId'))->first();
+        $phonePassword = Executive::where('id', session('sExecutiveId')->id)->first();
+        $executiveInfo = Infoexecutives::where('executives_id', session('sExecutiveId')->id)->first();
         // $phonePassword->phone = $request->phone;
         // $phonePassword->password = $request->password;
         // $executiveInfo->name = $request->name;

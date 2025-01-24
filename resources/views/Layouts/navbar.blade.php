@@ -9,6 +9,11 @@
   <link rel="icon" href="favicon_io/favicon-16x16.png">
 
 
+  <!-- export csv css -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.2.1/css/dataTables.dataTables.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/3.2.0/css/buttons.dataTables.css">
+
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -220,7 +225,9 @@
             <!-- <img src="dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image"> -->
           </div>
           <div class="info">
-            <a href="#" class="d-block">USER</a>
+            <a href="#" class="d-block"><u>Executive</u></a>
+            <br>
+            <a href="#"><u>+880{{session('sExecutiveId')->phone}}</u></a>
           </div>
         </div>
 

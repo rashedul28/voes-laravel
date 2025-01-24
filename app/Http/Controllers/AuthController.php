@@ -19,8 +19,9 @@ class AuthController extends Controller
         $check = Members::where('phone', $request->phone)->where('password', $request->password)->where('role', 'Executive')->first();
 
         if ($check) {
-            $request->session()->put('sExecutiveId', $check->id);
+            $request->session()->put('sExecutiveId', $check);
             $request->session()->put('authorized', true);
+
             return redirect("/dashboard");
         } else {
             return back();
@@ -39,7 +40,7 @@ class AuthController extends Controller
             $check = Members::where('phone', $request->phone)->where('password', $request->password)->where('role', 'Volunteer')->first();
 
             if ($check) {
-                $request->session()->put('sVolunteerId', $check->id);
+                $request->session()->put('sVolunteerId', $check);
                 $request->session()->put('authorized', true);
                 return redirect('/events/showEvent/ongoing');
             } else {
@@ -51,5 +52,6 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->session()->flush();
+        return view('Pages.Executive.login');
     }
 }

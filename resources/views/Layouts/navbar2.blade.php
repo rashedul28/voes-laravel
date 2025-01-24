@@ -220,7 +220,9 @@
             <!-- <img src="dist/img/user8-128x128.jpg" class="img-circle elevation-2" alt="User Image"> -->
           </div>
           <div class="info">
-            <a href="#" class="d-block">USER 2</a>
+            <a href="#" class="d-block"><u>Volunteer</u></a>
+            <br>
+            <a href="#"><u>+880{{session('sVolunteerId')->phone}}</u></a>
           </div>
         </div>
 

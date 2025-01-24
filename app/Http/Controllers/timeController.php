@@ -11,8 +11,8 @@ class timeController extends Controller
 
     public function FreeTime(Request $request)
     {
-        $id = session('sVolunteerId');
-        $data = Slot::where('members_id', $id)->first();
+
+        $data = Slot::where('members_id', session('sVolunteerId')->id)->first();
         return view("Pages.Volunteer.freeTime")
             ->with("data", $data);
     }
@@ -20,22 +20,22 @@ class timeController extends Controller
     public function FreeTimeSubmit(Request $request)
     {
 
-        $id = session('sVolunteerId');
-        $data = Slot::where('members_id', $id)->first();
+
+        $data = Slot::where('members_id', session('sVolunteerId')->id)->first();
 
         // $membersId = session('sVolunteerId');
-        $save = new Slot();
-        $save->members_id = $id;
+        // $save = new Slot();
+        $data->members_id = session('sVolunteerId')->id;
 
 
-        $save->slot1 = $request->slot1;
-        $save->slot2 = $request->slot2;
-        $save->slot3 = $request->slot3;
-        $save->slot4 = $request->slot4;
-        $save->slot5 = $request->slot5;
-        $save->slot6 = $request->slot6;
+        $data->slot1 = $request->slot1;
+        $data->slot2 = $request->slot2;
+        $data->slot3 = $request->slot3;
+        $data->slot4 = $request->slot4;
+        $data->slot5 = $request->slot5;
+        $data->slot6 = $request->slot6;
 
-        $save->save();
+        $data->save();
 
         return view("Pages.Volunteer.freeTime")
             ->with("data", $data);

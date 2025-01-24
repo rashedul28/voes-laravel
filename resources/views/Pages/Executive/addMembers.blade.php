@@ -20,7 +20,15 @@
 
 
 
-
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <form action="/members/add" method="post">
     @csrf
 
@@ -41,7 +49,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Password <span style="color:red">*</span> </label>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -49,7 +57,7 @@
                     </div>
                     <input type="text" class="form-control" name="password" placeholder="password" required>
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label>name</label>
@@ -61,7 +69,7 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Image</label>
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -69,7 +77,7 @@
                     </div>
                     <input type="file" class="form-control" name="image" placeholder="image">
                 </div>
-            </div>
+            </div> -->
 
             <div class="form-group">
                 <label>Department</label>
@@ -87,8 +95,8 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user-secret"></i></span>
                     <select class="form-control select2" style="width: 100%;" name="role" required>
-                        <option selected="selected">Executive</option>
-                        <option>Volunteer</option>
+                        <option value="Executive">Executive</option>
+                        <option value="Volunteer">Volunteer</option>
                     </select>
                 </div>
             </div>
