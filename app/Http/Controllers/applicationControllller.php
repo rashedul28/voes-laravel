@@ -22,14 +22,14 @@ class applicationControllller extends Controller
             "body" => 'required'
         ]);
 
-        $membersId = session('sVolunteerId');
+        $membersId = session('sVolunteerId')->id;
 
         $save = new Inqurie();
 
         $save->members_id = $membersId;
         $save->subject = $request->subject;
         $save->body = $request->body;
-        $save->read = false;
+        $save->read = 0;
 
         $save->save();
 

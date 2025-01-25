@@ -46,20 +46,13 @@
 
       <div class="card-body">
         <div class="form-group">
-          <input class="form-control" placeholder="info@voes.com" value="info@voes.com" required>
+          <input class="form-control" placeholder="info@voes.com" value="info@voes.com" required readonly>
         </div>
         <div class="form-group">
           <input class="form-control" placeholder="Subject" name="subject" required>
         </div>
         <div class="form-group">
           <textarea id="compose-textarea" class="form-control" style="height: 300px" placeholder="body" name="body" required></textarea>
-        </div>
-        <div class="form-group">
-          <div class="btn btn-default btn-file">
-            <i class="fas fa-paperclip"></i> Attachment
-            <input type="file" name="attachment">
-          </div>
-          <p class="help-block">Max. 32MB</p>
         </div>
       </div>
       <!-- /.card-body -->

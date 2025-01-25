@@ -44,8 +44,8 @@ class timeController extends Controller
 
     public function Volunteers(Request $request)
     {
-        $data = Members::where('role', 'Volunteer')->get();
 
+        $data = Members::where('role', 'Volunteer')->get();
 
         return view('Pages.Executive.availableVolunteer')
             ->with('msg', 'All Volunteers')

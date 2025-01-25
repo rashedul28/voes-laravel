@@ -52,6 +52,6 @@ class AuthController extends Controller
     public function logout(Request $request)
     {
         $request->session()->flush();
-        return view('Pages.Executive.login');
+        return redirect('/login/executive');
     }
 }
