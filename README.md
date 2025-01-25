@@ -1,42 +1,43 @@
-PMSCS FINAL PROJECT
-TITLE:: VOLUNTEER ORGANIZATION SYSTEM USING LARAVEL
+JU PMSCS Final Semester Prject
+Project Name: Volunteer Organization and Expert System-VOES
+Usually use for manage university student club virtually.
+System build usually for 2 users
+a. User1-Executive
+b. User2-Volunteer
 
----
+Executive can perform-
 
-User:: 1) Executive(admin) 2) Volunteer
+1. log in[phone no and password]
+2. see dashboard[total member, total doantion, total events]
+3. see volunteer and executive list
+4. download list csv format
+5. see profile
+6. update profile details
+7. add new executive, volunteer
+8. create new events
+9. see ongoing event
+10. see archieve event
+11. store perticular ongoing event expense
+12. store perticular ongoing event funding
+13. download event expense and funding statement with subtotal calculation in pdf formate
+14. see all expense and funding log
+15. store internatl donation by id
+16. store external donation by phone no and name
+17. create and upload notices
+18. see notices
+19. see internal donation history
+20. see external donation history
+21. see inquiries from volunteer
+22. see available volunteer by filter specific slot
+23. log out
 
-FUNCTIONALITIES:: EXECUTIVE
+Volunteer can perfom-
 
 1. log in
-2. dashboard
-3. show members(filter volunteer & executive)
-4. profie(crud)
-5. add member
-6. create new events
-7. show events (ongoing & archieve)
-8. track event expenses in specific sector
-9. trach event funding
-10. print statement of event funding & expenses
-11. show all lgos of funding & expenses
-12. manage donation (internal & external)
-13. create notices
-14. show notices
-15. manage volunteers application
-16. see available volunteers in specific time slot
-17. log out
-
-FUNCTIONALITIES:: VOLUNTEER
-
-1. log in
-2. dashboar
-3. show events
-4. show notices
-5. assign individual free time slot
-6. sent queries to exceutive
-7. log out
-
----
-
-MD: RASHEDUL ISLAM
-CSE202303054
-33 BATCH
+2. see dashboard
+3. see ongoing event
+4. see archieve event
+5. see notices
+6. upload inquiries(such reset my password)
+7. update individual free time schedual
+8. log out
