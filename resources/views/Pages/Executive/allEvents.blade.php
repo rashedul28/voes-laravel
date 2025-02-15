@@ -53,6 +53,7 @@
         <table class="table table-hover text-nowrap">
           <thead>
             <tr>
+              <th>Poster</th>
               <th>Index</th>
               <th>Id</th>
               <th>Title</th>
@@ -63,7 +64,9 @@
           </thead>
           <tbody>
             @foreach($events as $event )
+
             <tr>
+              <td><a href="/event-poster/{{$event->id}}">Poster</a></td>
               <td>{{$loop->index}}</td>
               <td>{{$event->id}}</td>
               <td>{{$event->event_name}}</td>
@@ -71,6 +74,8 @@
               <td>{{$event->end}}</td>
               <td>{{$event->description}}</td>
             </tr>
+
+
             @endforeach
           </tbody>
         </table>

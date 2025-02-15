@@ -77,10 +77,12 @@
                   <h2 class="lead"><b>{{$d->name}}</b></h2>
                   <ul class="ml-4 mb-0 fa-ul text-muted">
                     <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: {{$d->phone}}</li>
+                    <li class="small"><span class="fa-li"><i class="fa fa-id-card"></i></span> Vol Id #: {{$d->id}}</li>
+
                   </ul>
                 </div>
                 <div class="col-5 text-center">
-                  <img src="../../dist/img/user1-128x128.jpg" alt="user-avatar" class="img-circle img-fluid">
+                  <img src="{{ $d->image ? asset('storage/' . $d->image) : asset('images/default-profile.png') }}" alt="user-avatar" class="img-circle img-fluid">
                 </div>
               </div>
             </div>

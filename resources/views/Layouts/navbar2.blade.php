@@ -897,6 +897,14 @@
                     </li> -->
 
             <li class="nav-item">
+              <a href="/volunteer/profile" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>Profile</p>
+              </a>
+            </li>
+            </li>
+
+            <li class="nav-item">
               <a href="/notice/showNotice" class="nav-link">
                 <i class="fa fa-sticky-note  nav-icon"></i>
                 <p>Notice</p>

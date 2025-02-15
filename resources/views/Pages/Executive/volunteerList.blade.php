@@ -86,7 +86,10 @@
                                 </button>
                             </td>
                             <td>{{$volunteer->name}}</td>
-                            <td>{{$volunteer->image}}</td>
+                            <td><img
+                                    src="{{ $volunteer->image ? asset('storage/' . $volunteer->image) : asset('images/default-profile.png') }}"
+                                    alt="User profile picture" width="100"></td>
+                            </td>
                             <td>{{$volunteer->department}}</td>
                             <td>{{$volunteer->role}}</td>
                             <td><a href="">Reset Password</a></td>

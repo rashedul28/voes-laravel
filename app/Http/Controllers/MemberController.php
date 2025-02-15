@@ -16,7 +16,7 @@ class MemberController extends Controller
     public function addMember(Request $request)
     {
         $request->validate([
-            'phone' => "required | min:11 | numeric",
+            'phone' => "required | min:11 |numeric",
             'role' => 'required',
         ]);
 
@@ -34,7 +34,7 @@ class MemberController extends Controller
         $member->phone = $request->phone;
         $member->password = $password;
         $member->name = "N/A";
-        $member->image = "You look beautiful";
+        $member->image = "N/A";
         $member->department = $request->department;
         $member->role = $request->role;
         $member->joined = date('Y-m-d');
@@ -56,7 +56,8 @@ class MemberController extends Controller
             $data->save();
         }
 
-        return view('Pages.Executive.addMembers');
+        // return view('Pages.Executive.addMembers');
+        return back()->with('success', 'New member add successfully.');
 
         // $b = $member->id;
         // // dd($b);

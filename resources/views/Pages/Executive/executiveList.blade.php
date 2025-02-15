@@ -86,7 +86,9 @@
                 </button> -->
               </td>
               <td>{{$executive->name}}</td>
-              <td>{{$executive->image}}</td>
+              <td><img
+                  src="{{ $executive->image ? asset('storage/' . $executive->image) : asset('images/default-profile.png') }}"
+                  alt="User profile picture" width="100"></td>
               <td>{{$executive->department}}</td>
               <td>{{$executive->role}}</td>
               <!-- <td><a href="">Reset Password</a></td> -->

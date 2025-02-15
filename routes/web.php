@@ -9,6 +9,7 @@ use App\Http\Controllers\DonationController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\PosterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\timeController;
 use App\Http\Middleware\IsAuthorize;
@@ -28,7 +29,12 @@ Route::middleware(IsAuthorize::class)->group(function () {
 
 
     Route::get('/profile',                    [ProfileController::class, 'profileView']);
+
     Route::post('/profile/update',            [ProfileController::class, 'profileUpdate']);
+    // volunteer profile
+
+    Route::get('/volunteer/profile', [ProfileController::class, 'profileViewVolunteer']);
+    Route::post('/volunteer/profile/update', [ProfileController::class, 'profileUpdateV']);
 
     // Route::get('/members/allMember',          [PageController::class, 'showAllMembersList']);
     Route::get('/members/executive',          [MemberController::class, 'executiveList']);
@@ -102,6 +108,9 @@ Route::middleware(IsAuthorize::class)->group(function () {
 
     Route::get('/sent-application', [applicationControllller::class, 'application']);
     Route::post('/sent-application/submit', [applicationControllller::class, 'applicationSubmit']);
+
+
+    Route::get('/event-poster/{id}', [PosterController::class, 'eventPoster']);
 });
 
 Route::get('/logout', [AuthController::class, 'logout']);

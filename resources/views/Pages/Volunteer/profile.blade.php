@@ -1,4 +1,4 @@
-@extends('Layouts.navbar')
+@extends('Layouts.navbar2')
 @section('content')
 
 
@@ -11,7 +11,7 @@
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active">User Profile</li>
+          <li class="breadcrumb-item active">Volunteer Profile</li>
         </ol>
       </div>
     </div>
@@ -80,7 +80,7 @@
               </div>
               @endif
               <div class="active-tab-pane" id="settings">
-                <form class="form-horizontal" method="post" action="/profile/update" enctype="multipart/form-data">
+                <form class="form-horizontal" method="post" action="/volunteer/profile/update" enctype="multipart/form-data">
                   @csrf
 
 
