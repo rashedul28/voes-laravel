@@ -28,12 +28,12 @@
           <div class="inner">
             <h3>{{$totalMember}}</h3>
 
-            <p>Total Members</p>
+            <p><i>Total Members</i></p>
           </div>
           <div class="icon">
-            <i class="ion ion-person-add"></i>
+            <i class="ion ion-person"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
         </div>
       </div>
       <!-- ./col -->
@@ -41,47 +41,50 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>{{$totalEvent}}</h3>
+            <h3>{{$ongoing}}</h3>
 
-            <p>Total Event</p>
+            <p><i>Ongoing Event</i></p>
           </div>
           <div class="icon">
-            <i class="ion ion-pie-graph"></i>
+            <i class="ion ion-pause"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
         </div>
       </div>
+
+      <div class="col-lg-3 col-6">
+        <div class="small-box bg-danger">
+          <div class="inner">
+            <h3>{{$archive}}</h3>
+
+            <p><i>Past Event</i></p>
+          </div>
+          <div class="icon">
+
+            <i class="ion ion-play"></i>
+          </div>
+          <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
+        </div>
+      </div>
+
+
       <!-- ./col -->
       <div class="col-lg-3 col-6">
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>{{$TotalDonation}}</h3>
+            <h3> ৳ {{$TotalDonation}}</h3>
 
-            <p>Total Donation</p>
+            <p><i>Total Donation</i></p>
           </div>
           <div class="icon">
-            <i class="ion ion-stats-bars"></i>
+            <i class="ion ion-calculator"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+          <!-- <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a> -->
         </div>
       </div>
       <!-- ./col -->
-      <div class="col-lg-3 col-6">
-        <!-- small box -->
-        <div class="small-box bg-danger">
-          <div class="inner">
-            <h3>33</h3>
 
-            <p>Unique Visitors</p>
-          </div>
-          <div class="icon">
-
-            <i class="ion ion-person-add"></i>
-          </div>
-          <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-        </div>
-      </div>
       <!-- ./col -->
     </div>
 

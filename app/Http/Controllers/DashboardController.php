@@ -13,7 +13,8 @@ class DashboardController extends Controller
     public function dashbordCount(Request $request)
     {
         $totalMember = Members::count();
-        $totalEvent = Event::count();
+        $ongoing = Event::where('end', '>', date('Y-m-d'))->count();
+        $archive = Event::where('end', '<', date('Y-m-d'))->count();
 
         $internalTotalDonation = Indonation::sum('amount');
         $externalTotalDonation = Exdonation::sum('amount');
@@ -25,7 +26,8 @@ class DashboardController extends Controller
         // dd($totalMember);
         return view("Pages.Executive.dashboardCount")
             ->with("totalMember", $totalMember)
-            ->with("totalEvent", $totalEvent)
+            ->with("ongoing", $ongoing)
+            ->with("archive", $archive)
             ->with("TotalDonation", $TotalDonation);
     }
 }

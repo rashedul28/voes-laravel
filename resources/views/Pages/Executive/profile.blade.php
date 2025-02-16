@@ -28,9 +28,9 @@
         <div class="card card-primary card-outline">
           <div class="card-body box-profile">
             <div class="text-center">
-              <img class="profile-user-img img-fluid img-circle"
+              <img
                 src="{{ $data->image ? asset('storage/' . $data->image) : asset('images/default-profile.png') }}"
-                alt="User profile picture">
+                alt="User profile picture" width="100">
             </div>
 
             <h3 class="profile-username text-center">{{$data->name}}</h3>
